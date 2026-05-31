@@ -1008,6 +1008,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848593012}
   m_CullTransparentMesh: 1
+--- !u!1 &886450041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 886450043}
+  - component: {fileID: 886450042}
+  m_Layer: 0
+  m_Name: UserData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &886450042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886450041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a348b01a2406c2148966aeccee7d1838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UserData
+  cash: 0
+  coins: 0
+  gems: 0
+  powerStones: 0
+--- !u!4 &886450043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886450041}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.22386, y: 1.23187, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1075725196
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,6 +1231,7 @@ MonoBehaviour:
   coinsText: {fileID: 1075725197}
   enemyHPText: {fileID: 351392838}
   enemyATKText: {fileID: 1281593798}
+  userData: {fileID: 886450042}
 --- !u!114 &1106320608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2208,3 +2257,4 @@ SceneRoots:
   - {fileID: 833845219}
   - {fileID: 1580868908}
   - {fileID: 1959394445}
+  - {fileID: 886450043}

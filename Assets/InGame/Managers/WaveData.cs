@@ -23,6 +23,10 @@ public class WaveData : ScriptableObject
     public float speedMultiplier = 1f;
     public float attackMultiplier = 1f;
 
+    [Header("Rewards")]
+    public int coinDrop = 5;
+    public int cashDrop = 10;
+
     [Header("Spawn Table")]
     public List<SpawnEntry> spawnEntries;
 }

@@ -15,10 +15,12 @@ public class UIManager : MonoBehaviour
     [Header("Bottom Panel")]
     public TextMeshProUGUI enemyHPText; // displays current wave enemy HP
     public TextMeshProUGUI enemyATKText; // displays current wave enemy ATK
+    public UserData userData;
 
     void Update()
     {
         UpdateWaveUI(); // called every frame to keep UI in sync with game state
+        UpdateCoins();
     }
 
     void UpdateWaveUI()
@@ -38,5 +40,10 @@ public class UIManager : MonoBehaviour
         {
             waveTimerBar.value = waveManager.GetPauseTimer() / waveManager.timeBetweenWaves;
         }
+    }
+
+    void UpdateCoins()
+    {
+        coinsText.text = "C " + userData.coins.ToString();
     }
 }

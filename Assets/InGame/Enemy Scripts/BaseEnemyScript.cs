@@ -8,6 +8,10 @@ public class BaseEnemyScript : MonoBehaviour
     public float attackDmg = 1;
     public float attackSpd = 1.1f;
     public float moveSpeed = 0.25f;
+    public UserData userData;
+    public WaveManager waveManager;
+
+
 
 
     //movement variables. stop distance is for ranged enemies
@@ -17,7 +21,8 @@ public class BaseEnemyScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        userData = FindAnyObjectByType<UserData>();
+        waveManager = FindAnyObjectByType<WaveManager>();
     }
 
     // Update is called once per frame
@@ -42,6 +47,8 @@ public class BaseEnemyScript : MonoBehaviour
         if (health <= 0)
         {
             gameObject.SetActive(false);
+            userData.coins += waveManager.GetCurrentWave().coinDrop;
+
         }
 
     }
