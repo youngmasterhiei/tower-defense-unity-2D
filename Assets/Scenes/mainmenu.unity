@@ -2539,11 +2539,13 @@ MonoBehaviour:
   - {fileID: 271439666}
   - {fileID: 650902871}
   - {fileID: 441934513}
+  - {fileID: 778684662}
   upgradeNavButtons:
   - {fileID: 1069488127}
   - {fileID: 1434946113}
   - {fileID: 532747318}
   - {fileID: 1190999498}
+  upgradeData: {fileID: 11400000, guid: ff8e8cf1ed3ce2645b913ca9fda434d3, type: 2}
 --- !u!114 &178978901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8811,7 +8813,7 @@ GameObject:
   - component: {fileID: 778684665}
   - component: {fileID: 778684664}
   m_Layer: 5
-  m_Name: UtilityUpgradeScrollView (1)
+  m_Name: 'AbilitiesUpgradeScrollView '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
