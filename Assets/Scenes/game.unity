@@ -1041,6 +1041,15 @@ MonoBehaviour:
   coins: 0
   gems: 0
   powerStones: 0
+  damageLevel: 0
+  attackSpeedLevel: 0
+  critChanceLevel: 0
+  critMultLevel: 0
+  healthLevel: 0
+  healthRegenLevel: 0
+  defenseLevel: 0
+  cashLevel: 0
+  coinsLevel: 0
 --- !u!4 &886450043
 Transform:
   m_ObjectHideFlags: 0

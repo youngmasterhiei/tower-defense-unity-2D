@@ -1,58 +1,55 @@
 using UnityEngine;
-using UnityEngine.UIElements; // Make sure this is at the top!
+using UnityEngine.UI;
 
 public class WorkShopController : MonoBehaviour
 {
-    [Header("Data Source")]
-    [SerializeField] private UpgradeData upgradeData;
 
-    // Changed from OnEnable() to Start() to guarantee everything is loaded in memory!
-    private void Start()
+
+    // sets buttons and pages in the inspector into an array
+    public GameObject[] upgradePages;
+    public GameObject[] upgradeNavButtons;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+
+    void Start()
     {
-        // 1. Grab the component safely
-        UIDocument uiDoc = GetComponent<UIDocument>();
 
-        // 2. The Safety Check: If the inspector component is missing, stop instead of crashing!
-        if (uiDoc == null)
+        // is called once in start to save the button number to an index
+        for (int i = 0; i < upgradeNavButtons.Length; i++)
         {
-            Debug.LogError($"[WorkShopController] Missing a UIDocument component on {gameObject.name}! Please add one in the Inspector.", this);
-            return;
-        }
-
-        // 3. Extract the root element safely
-        VisualElement root = uiDoc.rootVisualElement;
-        if (root == null)
-        {
-            Debug.LogError("[WorkShopController] UI Toolkit root element is null. Double check your Panel Settings assignment!", this);
-            return;
-        }
-
-        root.Clear();
-
-        // 4. Build the ScrollView container
-        ScrollView container = new ScrollView(ScrollViewMode.Vertical);
-        container.style.flexGrow = 1f;
-        root.Add(container);
-
-        // 5. Safety checks for data source
-        if (upgradeData == null || upgradeData.upgrades == null)
-        {
-            Debug.LogWarning("Please drag your UpgradeData asset file into the script slot in the Inspector!");
-            return;
-        }
-
-        // 6. The Dynamic Loop
-        foreach (UpgradeEntry upgrade in upgradeData.upgrades)
-        {
-            container.Add(new Button(() => OnUpgradeClicked(upgrade.upgradeName))
+            Button btn = upgradeNavButtons[i].GetComponent<Button>();
+            if (btn != null)
             {
-                text = $"{upgrade.upgradeName}\nCost: {upgrade.workshopCost}"
-            });
+                // Freeze the current loop index and program the button to open that matching page on click
+                int indexForLambda = i;
+                btn.onClick.AddListener(() => SwitchPage(indexForLambda));
+            }
+
         }
     }
 
-    private void OnUpgradeClicked(string name)
+    public void SwitchPage(int panelIndex)
     {
-        Debug.Log($"[UI Toolkit] Tapped to purchase: {name}");
+        // Debug.Log(panels[0]);
+        // GameObject.Find("StartGameButton");
+        // uiPanel.SetActive(true);
+
+
+        for (int i = 0; i < upgradePages.Length; i++)
+        {
+            // If the loop index matches the requested index, set active. Otherwise, inactive.
+            // shorthand if then statmenet
+            upgradePages[i].SetActive(i == panelIndex);
+        }
+
+    }
+
+    public void ShowWorkShop()
+    {
+
+
+        // foreach (UpgradeEntry entry in upgradeData.upgrades) { Debug.Log(entry.upgradeName); }
     }
 }
+
+
