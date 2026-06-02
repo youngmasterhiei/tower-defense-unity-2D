@@ -5,21 +5,22 @@ public class NavManager : MonoBehaviour
 {
 
 
+    // sets buttons and pages in the inspector into an array
     public GameObject[] mainPages;
     public GameObject[] navButtons;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
-    // Update is called once per frame
     void Start()
     {
 
-
+        // is called once in start to save the button number to an index
         for (int i = 0; i < navButtons.Length; i++)
         {
             Button btn = navButtons[i].GetComponent<Button>();
             if (btn != null)
             {
+                // Freeze the current loop index and program the button to open that matching page on click
                 int indexForLambda = i;
                 btn.onClick.AddListener(() => SwitchPage(indexForLambda));
             }
