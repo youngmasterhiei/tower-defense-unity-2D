@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic; // Required namespace to utilize generic types like List<>
 
+/// <summary>
 /// Controls the Main Menu Workshop UI. Handles switching between category pages (Offense, Defense, Utility)
 /// and dynamically populates placeholder grid buttons using values defined in a central UpgradeData ScriptableObject.
 /// </summary>
@@ -13,6 +14,11 @@ public class WorkShopController : MonoBehaviour
 
     // References to the navigation bar buttons used to toggle between the different upgrade pages
     public GameObject[] upgradeNavButtons;
+
+    [Header("UI Prefab Link")]
+    // Reference slot for your Master UI Button Prefab template component. 
+    // This explicitly tells this controller to recognize the custom UpgradeButtonUI data type.
+    public UpgradeButtonUI buttonTemplate;
 
     [Header("Data Architecture")]
     // Reference slot for your custom UpgradeData ScriptableObject containing the nested category and upgrade entries
@@ -97,8 +103,8 @@ public class WorkShopController : MonoBehaviour
             // Inner Loop: Step through every UI placeholder button detected inside this specific page
             for (int i = 0; i < buttons.Length; i++)
             {
-                // Look deep inside the active button's layout hierarchy to find a text display module component
-                TMPro.TMP_Text txt = buttons[i].GetComponentInChildren<TMPro.TMP_Text>();
+                // 1. Extract your new custom script component right off the current button object.
+                UpgradeButtonUI btnUI = buttons[i].GetComponent<UpgradeButtonUI>();
 
                 // Logical Branch: Determine if we have real scriptable asset data ready for this button slot index
                 if (i < categoryUpgrades.Count)
@@ -106,8 +112,14 @@ public class WorkShopController : MonoBehaviour
                     // Pull the structural data parameters corresponding to this exact index number out of our Scriptable list
                     UpgradeEntry entry = categoryUpgrades[i];
 
-                    // If a TextMeshPro component was found, override its placeholder text with our official name (e.g., "Damage")
-                    if (txt != null) txt.text = entry.upgradeName;
+                    // 2. Direct, lightning-fast assignment using your new drag-and-drop reference slots!
+                    if (btnUI != null)
+                    {
+                        // Safely apply text to your Name, Level, and Cost fields if they have been assigned
+                        if (btnUI.nameText != null) btnUI.nameText.text = entry.upgradeName;
+                        if (btnUI.levelText != null) btnUI.levelText.text = "Lvl 0";
+                        if (btnUI.costText != null) btnUI.costText.text = $"${entry.workshopCost:F0}";
+                    }
 
                     // Ensure the button is fully active, visible, and interactive for the user
                     buttons[i].gameObject.SetActive(true);
