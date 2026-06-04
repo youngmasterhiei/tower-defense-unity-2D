@@ -24,7 +24,6 @@ public class WorkShopController : MonoBehaviour
     // Reference slot for your custom UpgradeData ScriptableObject containing the nested category and upgrade entries
     public UpgradeData upgradeData;
 
-    /// <summary>
     /// Unity built-in lifecycle method called automatically once before the very first frame update.
     /// Used here to initialize button events and trigger the initial UI setup.
     /// </summary>
@@ -132,5 +131,11 @@ public class WorkShopController : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void ApplyUpgradesToStatsWorkshop()
+    {
+
+
     }
 }

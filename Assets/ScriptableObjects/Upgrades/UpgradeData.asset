@@ -12,66 +12,340 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a40dc194bc01b3c469d4dccce400fdf3, type: 3}
   m_Name: UpgradeData
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
-  damage:
-    workshopCost: 1
-    workshopCostMultiplier: 1.1
-    workshopEffectPerLevel: 1.05
-    inGameCost: 1
-    inGameCostMultiplier: 1.1
-    inGameEffectPerLevel: 1.05
-  attackSpeed:
-    workshopCost: 1
-    workshopCostMultiplier: 1.1
-    workshopEffectPerLevel: 1.05
-    inGameCost: 1
-    inGameCostMultiplier: 1.1
-    inGameEffectPerLevel: 1.05
-  critChance:
-    workshopCost: 1
-    workshopCostMultiplier: 1.1
-    workshopEffectPerLevel: 1.05
-    inGameCost: 1
-    inGameCostMultiplier: 1.1
-    inGameEffectPerLevel: 1.05
-  critMultiplier:
-    workshopCost: 1
-    workshopCostMultiplier: 1.1
-    workshopEffectPerLevel: 1.05
-    inGameCost: 1
-    inGameCostMultiplier: 1.1
-    inGameEffectPerLevel: 1.05
-  health:
-    workshopCost: 1
-    workshopCostMultiplier: 1.1
-    workshopEffectPerLevel: 1.05
-    inGameCost: 1
-    inGameCostMultiplier: 1.1
-    inGameEffectPerLevel: 1.05
-  healthRegen:
-    workshopCost: 1
-    workshopCostMultiplier: 1.1
-    workshopEffectPerLevel: 1.05
-    inGameCost: 1
-    inGameCostMultiplier: 1.1
-    inGameEffectPerLevel: 1.05
-  defense:
-    workshopCost: 1
-    workshopCostMultiplier: 1.1
-    workshopEffectPerLevel: 1.05
-    inGameCost: 1
-    inGameCostMultiplier: 1.1
-    inGameEffectPerLevel: 1.05
-  cash:
-    workshopCost: 1
-    workshopCostMultiplier: 1.1
-    workshopEffectPerLevel: 1.05
-    inGameCost: 1
-    inGameCostMultiplier: 1.1
-    inGameEffectPerLevel: 1.05
-  coins:
-    workshopCost: 1
-    workshopCostMultiplier: 1.1
-    workshopEffectPerLevel: 1.05
-    inGameCost: 1
-    inGameCostMultiplier: 1.1
-    inGameEffectPerLevel: 1.05
+  categories:
+  - categoryName: Offense
+    upgrades:
+    - upgradeName: Damage
+      statValue: 25
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 1
+    - upgradeName: Attack Speed
+      statValue: 2.3
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 1
+    - upgradeName: Range
+      statValue: 4
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 1
+    - upgradeName: Crit Chance
+      statValue: 2
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Crit Multiplier
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Multi-Shot Chance
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Multi-Shot Quantity
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Rapid-Fire Duration
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Rapid-Fire Chance
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Bounce-Shot Chance
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Bounce-Shot Quantity
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Rend-Armor Chance
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Rend-Armor Multiplier
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Poison-Shot Duration
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Poison-Shot Chance
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Slow-Shot Chance
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Slow-Shot Duration
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+  - categoryName: Defense
+    upgrades:
+    - upgradeName: Health
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 1
+    - upgradeName: Health Regen
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 1
+    - upgradeName: Defense
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Knockback Chance
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Knockback Strength
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Shield Amount
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Shield Regen
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Lifesteal Percent
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+  - categoryName: Utility
+    upgrades:
+    - upgradeName: Cash
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 1
+    - upgradeName: Coins
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 1
+    - upgradeName: Mana Amount
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Mana Regen
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Free Upgrade Offense
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Free Upgrade Defense
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Free Upgrade Utility
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
+    - upgradeName: Wave Skip Chance
+      statValue: 1
+      workshopCost: 1
+      workshopCostMultiplier: 1.1
+      workshopEffectPerLevel: 1.05
+      inGameCost: 1
+      inGameCostMultiplier: 1.1
+      inGameEffectPerLevel: 1.05
+      unLockCost: 0
+      isUnlocked: 0
